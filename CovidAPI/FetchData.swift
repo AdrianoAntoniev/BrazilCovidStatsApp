@@ -21,7 +21,9 @@ class FetchData: ObservableObject {
                             let data = try JSONDecoder().decode(StatesData.self, from: safeData)
                             
                             for aStateData in data.states {
-                                self.allStates.append(State(from: aStateData))
+                                DispatchQueue.main.async {
+                                    self.allStates.append(State(from: aStateData))
+                                }                                
                             }
                         }
                         
