@@ -8,7 +8,7 @@
 import Foundation
 
 class FetchData: ObservableObject {
-    @Published var allStatesData: [State] = []
+    @Published var allStates: [State] = []
     
     init() {
         let urlString = "https://covid19-brazil-api.vercel.app/api/report/v2"
@@ -21,15 +21,13 @@ class FetchData: ObservableObject {
                             let data = try JSONDecoder().decode(StatesData.self, from: safeData)
                             
                             for aStateData in data.states {
-                                self.allStatesData.append(State(from: aStateData))
+                                self.allStates.append(State(from: aStateData))
                             }
                         }
                         
                     } catch {
                         print("Ooops! \(error.localizedDescription)")
                     }
-                    
-                    print(self.allStatesData)
                     return
                 }
                 

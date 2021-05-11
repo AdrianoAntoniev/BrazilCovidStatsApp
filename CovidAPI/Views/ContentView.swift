@@ -8,13 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var data = FetchData()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-        
-            .onAppear {
-                _ = FetchData()
-            }
+        NavigationView {
+            List(data.allStates, id: \.self) { state in
+                HStack {
+                    Image("\(state.uf)")
+                        .resizable()
+                        .frame(width: 40, height: 20)
+                    
+                    NavigationLink(state.name, destination: StateDetailView(state: state))
+                    
+                }
+                
+            }.navigationBarTitle("Covid-19 no Brasil")
+        }
     }
 }
 

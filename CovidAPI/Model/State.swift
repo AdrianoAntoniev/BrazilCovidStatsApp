@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct State {
+struct State: Hashable, Identifiable {
     let uf: String
     let name: String
     let amountOfCases: Int
@@ -15,7 +15,11 @@ struct State {
     let suspects: Int
 //    let refuses: Int
     let dayOfInfo: String
-
+    
+    var id: String {
+        return uf
+    }
+    
     init(from data: StateData) {
         self.uf = data.uf
         self.name = data.state
