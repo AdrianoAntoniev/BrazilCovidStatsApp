@@ -35,6 +35,6 @@ struct StateDetailView: View {
 
 struct StateDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        StateDetailView(state: State(from: StateData(uf: "MG", state: "Minas Gerais", cases: 0, deaths: 0, suspects: 0, datetime: "90sd0a9sd8fa0sd")))
+        StateDetailView(state: State(from: StateData(uf: "MG", state: "Minas Gerais", cases: 12345676543, deaths: 1234567, suspects: 12345678, datetime: "90sd0a9sd8fa0sd")))
     }
 }
