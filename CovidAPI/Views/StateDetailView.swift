@@ -20,16 +20,23 @@ struct StateDetailView: View {
                 .resizable()
                 .frame(width: 300, height: 200, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 .border(Color.yellow)
-                .padding(.bottom, 100)
+                .padding(.bottom, 50)
             
             
             
             VStack(alignment: .leading, spacing: 10) {
-                Text("Casos confirmados: \(state.amountOfCases)")
-                Text("Total de mortes: \(state.deaths)")
-                Text("Total de casos suspeitos: \(state.suspects)")
-                Text("(Dados de \(state.dayOfInfo))")
-            }
+                LabelView(label: "Casos confirmados: ", description: state.amountOfCases)
+                Divider()
+                
+                LabelView(label: "Total de mortes: ", description: state.deaths)
+                Divider()
+                
+                LabelView(label: "Total de casos suspeitos", description: state.suspects)
+                Divider()
+                
+                LabelView(label: "Data da coleta das informações:  ", description: state.dayOfInfo)
+                Divider()
+            }.padding()
         }
     }
 }
