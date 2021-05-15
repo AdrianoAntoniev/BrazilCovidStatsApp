@@ -28,6 +28,7 @@ struct StateDetailView: View {
                 Text("Casos confirmados: \(state.amountOfCases)")
                 Text("Total de mortes: \(state.deaths)")
                 Text("Total de casos suspeitos: \(state.suspects)")
+                Text("(Dados de \(state.dayOfInfo))")
             }
         }
     }

@@ -19,9 +19,7 @@ struct ContentView: View {
                         .frame(width: 40, height: 20)
                     
                     NavigationLink(state.name, destination: StateDetailView(state: state))
-                    
-                }
-                
+                }                
             }.navigationBarTitle("Covid-19 no Brasil")
         }
     }

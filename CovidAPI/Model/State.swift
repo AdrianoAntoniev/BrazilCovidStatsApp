@@ -23,17 +23,28 @@ struct State: Hashable, Identifiable {
     init(from data: StateData) {
         self.uf = data.uf
         self.name = data.state
-        self.amountOfCases = Self.format(number: data.cases)
-        self.deaths = Self.format(number: data.deaths)
-        self.suspects = Self.format(number: data.suspects)
-        self.dayOfInfo = data.datetime        
+        self.amountOfCases = Self.formatNumber(data.cases)
+        self.deaths = Self.formatNumber(data.deaths)
+        self.suspects = Self.formatNumber(data.suspects)
+        self.dayOfInfo = Self.formatDate(data.datetime)
     }
     
-    private static func format(number: Int) -> String {
+    private static func formatNumber(_ number: Int) -> String {
         let formatter = NumberFormatter()
         formatter.locale = Locale(identifier: "pt-BR")
         
         return formatter.string(from: NSNumber(value: number)) ?? "0"
+    }
+    
+    private static func formatDate(_ date: String) -> String {
+        let dateConvertedString = date.prefix(10) // 2021-02-26
+                
+        let dayString = dateConvertedString.suffix(2) // 26
+        let monthString = dateConvertedString.prefix(7).suffix(2) // 2021-02, 02
+        let yearString = dateConvertedString.prefix(4) // 02
+        
+        
+        return "\(dayString)/\(monthString)/\(yearString)"                
     }
 }
 
