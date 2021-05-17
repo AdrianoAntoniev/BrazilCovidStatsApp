@@ -16,7 +16,7 @@ struct StatesListView: View {
                 HStack {
                     Image("\(state.uf)")
                         .resizable()
-                        .frame(width: 80, height: 60)
+                        .frame(width: 80, height: 50)
                         .padding()
                     
                     NavigationLink(state.name, destination: StateDetailView(state: state))

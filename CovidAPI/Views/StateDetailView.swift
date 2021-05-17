@@ -25,16 +25,13 @@ struct StateDetailView: View {
             
             
             VStack(alignment: .leading, spacing: 10) {
-                LabelView(label: "Casos confirmados: ", description: state.amountOfCases)
+                LabelView(label: "Casos confirmados:", description: state.amountOfCases)
                 Divider()
                 
-                LabelView(label: "Total de mortes: ", description: state.deaths)
+                LabelView(label: "Total de mortes:", description: state.deaths)
                 Divider()
                 
-                LabelView(label: "Total de casos suspeitos", description: state.suspects)
-                Divider()
-                
-                LabelView(label: "Data da coleta das informações:  ", description: state.dayOfInfo)
+                LabelView(label: "Data da coleta das informações:", description: state.dayOfInfo)
                 Divider()
             }.padding()
         }

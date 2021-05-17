@@ -47,25 +47,7 @@ struct FilteredStateView: View {
                                        stateName: data.minDeathsState().name,
                                        amount: data.minDeathsState().deaths)
                     }
-                }
-                                                        
-                Section {
-                    VStack {
-                        Text("Estado com mais casos suspeitos de Covid-19")
-                            .font(.custom("TravelingTypewriter", size: 15))
-                        StateStatsView(flagName: data.maxSuspectsState().uf,
-                                       stateName: data.maxSuspectsState().name,
-                                       amount: data.maxSuspectsState().suspects)
-                        
-                        Divider()
-                        
-                        Text("Estado com menos casos suspeitos de Covid-19")
-                            .font(.custom("TravelingTypewriter", size: 15))
-                        StateStatsView(flagName: data.minSuspectsState().uf,
-                                       stateName: data.minSuspectsState().name,
-                                       amount: data.minSuspectsState().suspects)
-                    }
-                }
+                }                                                                        
             }.navigationBarTitle("Dados de \(data.allStates.first?.dayOfInfo ?? "hoje")")
         }
     }
