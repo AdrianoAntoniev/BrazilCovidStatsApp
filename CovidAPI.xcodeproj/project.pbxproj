@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B91B8B5F2652FFD000F20812 /* StatesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B8B5E2652FFD000F20812 /* StatesListView.swift */; };
+		B91B8B622653053D00F20812 /* FilteredStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B8B612653053D00F20812 /* FilteredStateView.swift */; };
+		B91B8B65265308F800F20812 /* StateStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B8B64265308F800F20812 /* StateStatsView.swift */; };
 		B937A39A2649D80A002D1DD6 /* CovidAPIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B937A3992649D80A002D1DD6 /* CovidAPIApp.swift */; };
 		B937A39C2649D80A002D1DD6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B937A39B2649D80A002D1DD6 /* ContentView.swift */; };
 		B937A39E2649D80E002D1DD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B937A39D2649D80E002D1DD6 /* Assets.xcassets */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B91B8B5E2652FFD000F20812 /* StatesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesListView.swift; sourceTree = "<group>"; };
+		B91B8B612653053D00F20812 /* FilteredStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredStateView.swift; sourceTree = "<group>"; };
+		B91B8B64265308F800F20812 /* StateStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateStatsView.swift; sourceTree = "<group>"; };
 		B937A3962649D80A002D1DD6 /* CovidAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CovidAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B937A3992649D80A002D1DD6 /* CovidAPIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidAPIApp.swift; sourceTree = "<group>"; };
 		B937A39B2649D80A002D1DD6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B91B8B6A26531E1900F20812 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B937A3AF264A0B58002D1DD6 /* FetchData.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		B937A38D2649D80A002D1DD6 = {
 			isa = PBXGroup;
 			children = (
@@ -64,11 +78,11 @@
 			children = (
 				B937A3992649D80A002D1DD6 /* CovidAPIApp.swift */,
 				B937A3AD264A0B24002D1DD6 /* Views */,
-				B937A39D2649D80E002D1DD6 /* Assets.xcassets */,
 				B937A3B5264A0CAE002D1DD6 /* Model */,
+				B91B8B6A26531E1900F20812 /* Supporting Files */,
+				B937A39D2649D80E002D1DD6 /* Assets.xcassets */,
 				B937A3A22649D80E002D1DD6 /* Info.plist */,
 				B937A39F2649D80E002D1DD6 /* Preview Content */,
-				B937A3AF264A0B58002D1DD6 /* FetchData.swift */,
 			);
 			path = CovidAPI;
 			sourceTree = "<group>";
@@ -87,6 +101,9 @@
 				B937A39B2649D80A002D1DD6 /* ContentView.swift */,
 				B9C8C93D264A18560052574E /* StateDetailView.swift */,
 				B96786B8264F582700F46C1F /* LabelView.swift */,
+				B91B8B5E2652FFD000F20812 /* StatesListView.swift */,
+				B91B8B612653053D00F20812 /* FilteredStateView.swift */,
+				B91B8B64265308F800F20812 /* StateStatsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -169,8 +186,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B91B8B622653053D00F20812 /* FilteredStateView.swift in Sources */,
 				B937A3B3264A0BEB002D1DD6 /* StateData.swift in Sources */,
+				B91B8B65265308F800F20812 /* StateStatsView.swift in Sources */,
 				B9C8C93E264A18560052574E /* StateDetailView.swift in Sources */,
+				B91B8B5F2652FFD000F20812 /* StatesListView.swift in Sources */,
 				B96786B9264F582700F46C1F /* LabelView.swift in Sources */,
 				B937A39C2649D80A002D1DD6 /* ContentView.swift in Sources */,
 				B937A39A2649D80A002D1DD6 /* CovidAPIApp.swift in Sources */,

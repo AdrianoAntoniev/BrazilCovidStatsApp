@@ -9,8 +9,9 @@ import Foundation
 
 class FetchData: ObservableObject {
     @Published var allStates: [State] = []
-    
-    init() {
+    static let instance = FetchData()
+                        
+    private init() {
         let urlString = "https://covid19-brazil-api.vercel.app/api/report/v2"
         
         if let safeUrl = URL(string: urlString) {
@@ -37,4 +38,29 @@ class FetchData: ObservableObject {
             }.resume()
         }        
     }
+    
+    func maxCasesState() -> State {
+        return self.allStates.sorted { Int($0.amountOfCases)! > Int($1.amountOfCases)! }.first!
+    }
+    
+    func minCasesState() -> State {
+        return self.allStates.sorted { Int($0.amountOfCases)! < Int($1.amountOfCases)! }.first!
+    }
+    
+    func maxDeathsState() -> State {    
+        return self.allStates.sorted { Int($0.deaths)! > Int($1.deaths)! }.first!
+    }
+    
+    func minDeathsState() -> State {
+        return self.allStates.sorted { Int($0.deaths)! < Int($1.deaths)! }.first!
+    }
+    
+    func maxSuspectsState() -> State {
+        return self.allStates.sorted { Int($0.suspects)! > Int($1.suspects)! }.first!
+    }
+    
+    func minSuspectsState() -> State {
+        return self.allStates.sorted { Int($0.suspects)! < Int($1.suspects)! }.first!
+    }
+    
 }

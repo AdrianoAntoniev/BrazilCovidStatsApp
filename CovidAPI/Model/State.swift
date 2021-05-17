@@ -13,7 +13,6 @@ struct State: Hashable, Identifiable {
     let amountOfCases: String
     let deaths: String
     let suspects: String
-//    let refuses: Int
     let dayOfInfo: String
     
     var id: String {
