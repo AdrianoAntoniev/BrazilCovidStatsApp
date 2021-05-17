@@ -13,16 +13,16 @@ struct StateDetailView: View {
     var body: some View {
         VStack {
             Text("\(state.name) (\(state.uf))")
-                .font(.custom("TravelingTypewriter", size: 20))
+                .font(.custom("TravelingTypewriter", size: 35))
                 .bold()
+                .padding()
             
             Image("\(state.uf)")
                 .resizable()
                 .frame(width: 300, height: 200, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 .border(Color.yellow)
                 .padding(.bottom, 50)
-            
-            
+                        
             
             VStack(alignment: .leading, spacing: 10) {
                 LabelView(label: "Casos confirmados:", description: state.amountOfCases)
