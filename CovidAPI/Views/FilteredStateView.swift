@@ -13,48 +13,54 @@ struct FilteredStateView: View {
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("CASOS CONFIRMADOS")) {
+                Section {
                     VStack {
                         Text("Estado com mais casos confirmados")
-                            .font(.caption)
+                            .font(.custom("TravelingTypewriter", size: 15))
                         StateStatsView(flagName: data.maxCasesState().uf,
                                        stateName: data.maxCasesState().name,
                                        amount: data.maxCasesState().amountOfCases)
+                                                
+                        Divider()
                         
                         Text("Estado com menos casos confirmados")
-                            .font(.caption)
+                            .font(.custom("TravelingTypewriter", size: 15))
                         StateStatsView(flagName: data.minCasesState().uf,
                                        stateName: data.minCasesState().name,
                                        amount: data.minCasesState().amountOfCases)
                     }
                 }
                             
-                Section(header: Text("MORTES")) {
+                Section {
                     VStack {
                         Text("Estado com mais mortes confirmadas")
-                            .font(.caption)
+                            .font(.custom("TravelingTypewriter", size: 15))
                         StateStatsView(flagName: data.maxDeathsState().uf,
                                        stateName: data.maxDeathsState().name,
                                        amount: data.maxDeathsState().deaths)
                         
+                        Divider()
+                        
                         Text("Estado com menos mortes confirmadas")
-                            .font(.caption)
+                            .font(.custom("TravelingTypewriter", size: 15))
                         StateStatsView(flagName: data.minDeathsState().uf,
                                        stateName: data.minDeathsState().name,
                                        amount: data.minDeathsState().deaths)
                     }
                 }
                                                         
-                Section(header: Text("CASOS SUSPEITOS")) {
+                Section {
                     VStack {
                         Text("Estado com mais casos suspeitos de Covid-19")
-                            .font(.caption)
+                            .font(.custom("TravelingTypewriter", size: 15))
                         StateStatsView(flagName: data.maxSuspectsState().uf,
                                        stateName: data.maxSuspectsState().name,
                                        amount: data.maxSuspectsState().suspects)
                         
+                        Divider()
+                        
                         Text("Estado com menos casos suspeitos de Covid-19")
-                            .font(.caption)
+                            .font(.custom("TravelingTypewriter", size: 15))
                         StateStatsView(flagName: data.minSuspectsState().uf,
                                        stateName: data.minSuspectsState().name,
                                        amount: data.minSuspectsState().suspects)

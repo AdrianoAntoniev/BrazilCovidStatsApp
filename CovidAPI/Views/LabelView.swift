@@ -13,13 +13,12 @@ struct LabelView: View {
     
     var body: some View {
         HStack {
-            Text(label)                
-                .font(.title2)
+            Text(label)
             
             Spacer()
             
             Text(description)
-        }
+        }.font(.custom("TravelingTypewriter", size: 20))
     }
 }
 

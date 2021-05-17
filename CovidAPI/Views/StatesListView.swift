@@ -16,9 +16,11 @@ struct StatesListView: View {
                 HStack {
                     Image("\(state.uf)")
                         .resizable()
-                        .frame(width: 40, height: 20)
+                        .frame(width: 80, height: 60)
+                        .padding()
                     
                     NavigationLink(state.name, destination: StateDetailView(state: state))
+                        .font(.custom("TravelingTypewriter", size: 30))
                 }
             }.navigationBarTitle("Covid-19 no Brasil")
         }

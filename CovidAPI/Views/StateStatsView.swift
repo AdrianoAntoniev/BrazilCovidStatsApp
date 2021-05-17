@@ -18,14 +18,18 @@ struct StateStatsView: View {
                 .resizable()
                 .frame(width: 40, height: 30)
             Text(stateName)
-                .font(.custom("Arial", size: 20))
+                .font(.custom("TravelingTypewriter", size: 30))
+                .bold()
             
             Spacer()
             
             VStack(alignment: .trailing) {
                 Text("TOTAL")
                     .foregroundColor(.red)
+                    .font(.custom("TravelingTypewriter", size: 20))
+                    
                 Text(amount)
+                    .font(.custom("TravelingTypewriter", size: 15))
             }
         }.padding()
         

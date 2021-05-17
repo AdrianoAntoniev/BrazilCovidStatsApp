@@ -19,6 +19,8 @@
 		B937A3B3264A0BEB002D1DD6 /* StateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B937A3B2264A0BEB002D1DD6 /* StateData.swift */; };
 		B96786B9264F582700F46C1F /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96786B8264F582700F46C1F /* LabelView.swift */; };
 		B9C8C93E264A18560052574E /* StateDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C8C93D264A18560052574E /* StateDetailView.swift */; };
+		B9E81A78265328D200B1C003 /* tox.otf in Resources */ = {isa = PBXBuildFile; fileRef = B9E81A77265328D100B1C003 /* tox.otf */; };
+		B9E81A7D26532AA700B1C003 /* TravelingTypewriter.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9E81A7C26532AA700B1C003 /* TravelingTypewriter.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		B937A3B2264A0BEB002D1DD6 /* StateData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateData.swift; sourceTree = "<group>"; };
 		B96786B8264F582700F46C1F /* LabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
 		B9C8C93D264A18560052574E /* StateDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDetailView.swift; sourceTree = "<group>"; };
+		B9E81A77265328D100B1C003 /* tox.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = tox.otf; sourceTree = "<group>"; };
+		B9E81A7C26532AA700B1C003 /* TravelingTypewriter.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TravelingTypewriter.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 				B91B8B6A26531E1900F20812 /* Supporting Files */,
 				B937A39D2649D80E002D1DD6 /* Assets.xcassets */,
 				B937A3A22649D80E002D1DD6 /* Info.plist */,
+				B9F247172653221D00F9A61B /* Fonts */,
 				B937A39F2649D80E002D1DD6 /* Preview Content */,
 			);
 			path = CovidAPI;
@@ -115,6 +120,15 @@
 				B937A3B2264A0BEB002D1DD6 /* StateData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B9F247172653221D00F9A61B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B9E81A7C26532AA700B1C003 /* TravelingTypewriter.ttf */,
+				B9E81A77265328D100B1C003 /* tox.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +189,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B937A3A12649D80E002D1DD6 /* Preview Assets.xcassets in Resources */,
+				B9E81A78265328D200B1C003 /* tox.otf in Resources */,
+				B9E81A7D26532AA700B1C003 /* TravelingTypewriter.ttf in Resources */,
 				B937A39E2649D80E002D1DD6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

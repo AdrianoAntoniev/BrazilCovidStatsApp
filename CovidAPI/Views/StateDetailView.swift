@@ -13,7 +13,7 @@ struct StateDetailView: View {
     var body: some View {
         VStack {
             Text("\(state.name) (\(state.uf))")
-                .font(.title)
+                .font(.custom("TravelingTypewriter", size: 20))
                 .bold()
             
             Image("\(state.uf)")
